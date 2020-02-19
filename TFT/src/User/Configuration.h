@@ -193,10 +193,10 @@
  * The format of the custom icon is as follows
  * Bit depth: 24 / 32 bit, Pixel size: 95*95(for TFT35), 70*70(for TFT28/TFT24)
  */
-#define CUSTOM_0_LABEL "Load EEPROM"
-#define CUSTOM_0_GCODE "M501\n"
-#define CUSTOM_1_LABEL "Save EEPROM"
-#define CUSTOM_1_GCODE "M500\n"
+#define CUSTOM_0_LABEL "Load"
+#define CUSTOM_0_GCODE "M501\nM42 P4 S0\nM42 P5 S0\nM42 P6 S255\n"
+#define CUSTOM_1_LABEL "Save"
+#define CUSTOM_1_GCODE "M500\nM42 P4 S255\nM42 P5 S0\nM42 P6 S0\n"
 #define CUSTOM_2_LABEL "Z UP"
 #define CUSTOM_2_GCODE "G91\nG1 Z0.02\nG90\nM42 P4 S255\nM42 P5 S0\nM42 P6 S0\n"
 #define CUSTOM_3_LABEL "Z Down"

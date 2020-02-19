@@ -193,20 +193,20 @@
  * The format of the custom icon is as follows
  * Bit depth: 24 / 32 bit, Pixel size: 95*95(for TFT35), 70*70(for TFT28/TFT24)
  */
-#define CUSTOM_0_LABEL "Restore EEPROM"
+#define CUSTOM_0_LABEL "Load EEPROM"
 #define CUSTOM_0_GCODE "M501\n"
-#define CUSTOM_1_LABEL "Disable Steppers"
-#define CUSTOM_1_GCODE "M84\n"
-#define CUSTOM_2_LABEL "init SD Card"
-#define CUSTOM_2_GCODE "M21\n"
-#define CUSTOM_3_LABEL "Release Sd Card"
-#define CUSTOM_3_GCODE "M22\n"
-//#define CUSTOM_4_LABEL "Custom4"
-//#define CUSTOM_4_GCODE "M105\n"
-//#define CUSTOM_5_LABEL "Custom5"
-//#define CUSTOM_5_GCODE "M105\n"
-//#define CUSTOM_6_LABEL "Custom6"
-//#define CUSTOM_6_GCODE "M105\n"
+#define CUSTOM_1_LABEL "Save EEPROM"
+#define CUSTOM_1_GCODE "M500\n"
+#define CUSTOM_2_LABEL "Z UP"
+#define CUSTOM_2_GCODE "G91\nG1 Z0.02\nG90\nM42 P4 S255\nM42 P5 S0\nM42 P6 S0\n"
+#define CUSTOM_3_LABEL "Z Down"
+#define CUSTOM_3_GCODE "G91\nG1 Z-0.02\nG90\nM42 P4 S0\nM42 P5 S0\nM42 P6 S255\n"
+#define CUSTOM_4_LABEL "Start MBL"
+#define CUSTOM_4_GCODE "G29 S1\n"
+#define CUSTOM_5_LABEL "Next Step"
+#define CUSTOM_5_GCODE "G29 S2\n"
+#define CUSTOM_6_LABEL "PID"
+#define CUSTOM_6_GCODE "M42 P4 S0\nM42 P5 S255\nM42 P6 S0\nM106 S127\nM303 S220 C8 U1\nM42 P4 S255\nM107\nM42 P5 S0\nM42 P6 S0\nM500\nM42 P4 S0\nM42 P5 S255\nM42 P6 S0\nM106 S127\nM303 E-1 S60 C8 U1\nM500\nM42 P4 S255\nM107\nM42 P5 S0\nM42 P6 S0\n"
 
 /*
 custom gcode below are compatible only if MENU_LIST_MODE is active
